@@ -2,80 +2,23 @@
 <html lang="en">
 <head>
     <title>justinpansacola</title>
-    <style>
-        *{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        body{
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-            background-color: #1F2833;
-        }
-        #header{
-            border: 1px solid #0b0C10;
-            background-color: #0b0C10;
-            padding: 20px;
-            margin-bottom: 0;
-            
-        }
-        #links{
-            padding: 1px;
-            background-color: #66fcf1;
-            margin-top: 0;
-        }
-
-        #links li{
-            display: inline;
-            padding: 20px;
-        }
-
-        #links li a{
-            color: #0b0C10;
-            text-decoration: none;
-        }
-
-        #header h1{
-            color: #66fcf1;
-        }
-        #midheader{
-            border: 1px #1F2833 solid;
-            width: 100%;
-            background-color: #1F2833;
-        }
-        #midheader img{
-            padding-top: 10px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 30%;
-            height: 50%;
-        }
-
-        #maincontent{
-            text-align: center;
-            color: white;
-        }
-
-        #footer{
-            margin-top: 125px;
-            background-color: #0b0C10;
-            color: white;
-            text-align: center;
-
-        }
-
-
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
+    <div id="headersettings">
+        <button class="dark-button" id="dark-button" onclick="darkmode()">Dark Mode</button>
+        <button class="dark-button" id="light-button" onclick="lightmode()">Light Mode</button>
+
+    </div>
     <div id="header">
-        <h1>Hi I'm JuiceTin!</h1>
+        <h1>Hi I'm Justin!</h1>
+
     </div>
 
     <div id="links">
         <ul>
-            <li><a href="https://linkedin.com/in/justinpansacola">About Me</a></li>
+            <li onmouseover="enlarge(this)"><a href="https://linkedin.com/in/justinpansacola">About Me</a></li>
             <li>Contact</li>
         </ul>
     </div>
@@ -84,13 +27,44 @@
         <img src="./1659521988089.jpeg" >
     </div>
 
-    <div id="maincontent">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reprehenderit rerum porro? Sequi unde aliquid temporibus nesciunt. Repellat voluptatem nulla dicta voluptates, laboriosam, voluptate necessitatibus fugit, voluptas labore cupiditate ex.</p>
+    <div id="maincontent" class="container-fluid w-50 mx-auto outline">
+        <div class="row h-100 outline">
+            <div class="col"><h1>Hello! Welcome to my page!</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-6 p-20 outline"><img width = 100px src="Python-logo-notext.svg.png" alt=""></div>
+            <div class="col-6">I like Python more than Javascript!</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque illo at esse mollitia repellendus culpa ducimus asperiores distinctio iste aspernatur ut quia nisi, provident qui cum accusamus labore tempore voluptatem!
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque illo at esse mollitia repellendus culpa ducimus asperiores distinctio iste aspernatur ut quia nisi, provident qui cum accusamus labore tempore voluptatem!
+            </div>
+        </div>
     </div>
 
     <div id="footer">
         <p>Copyright 2022 Justin Pansacola</p>
     </div>
-    
+
+
+    <!-- <script>
+        function darkmode(){
+            document.getElementsByTagName("div").forEach(function(){
+                div.style.color = white;
+            });
+
+
+    </script> -->
+    <script>
+        function enlarge(obj){
+            obj.width = 100;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
