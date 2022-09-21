@@ -14,7 +14,7 @@ body{
     min-height: 120vh;
     margin: 0;
     padding: 0;
-    background-color: #1F2833;
+    background-color: #21252b;
 }
 #headersettings{
     border: 1px solid #0b0C10;
@@ -57,9 +57,9 @@ body{
     color: #66fcf1;
 }
 #midheader{
-    border: 1px #1F2833 solid;
+    border: 1px #21252b solid;
     width: 100%;
-    background-color: #1F2833;
+    background-color: #21252b;
     margin-bottom: 20px;
 }
 #midheader img{
@@ -67,13 +67,18 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-    height: 50%;
+    width: 20%;
+    height: 40%;
 }
 
 #maincontent{
     text-align: center;
     color: white;
+
+}
+#maincontent img{
+   width: 200px;
+   align-self: center;
 }
 
 #footer{

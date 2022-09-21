@@ -11,12 +11,14 @@
         <button class="dark-button" id="light-button" onclick="lightmode()">Light Mode</button>
 
     </div>
+    <div class="jumbotron-fluid text-center">
     <div id="header">
         <h1>Hi I'm Justin!</h1>
 
     </div>
+    </div>
 
-    <div id="links">
+    <div id="links" class="text-center">
         <ul>
             <li onmouseover="enlarge(this)"><a href="https://linkedin.com/in/justinpansacola">About Me</a></li>
             <li>Contact</li>
@@ -27,29 +29,52 @@
         <img src="./1659521988089.jpeg" >
     </div>
 
-    <div id="maincontent" class="container-fluid w-50 mx-auto outline">
-        <div class="row h-100 outline">
+    <div id="maincontent" class="container mx-auto outline">
+
+        <div class="row outline">
+
             <div class="col"><h1>Hello! Welcome to my page!</h1></div>
         </div>
-        <div class="row">
-            <div class="col-6 p-20 outline"><img width = 100px src="Python-logo-notext.svg.png" alt=""></div>
-            <div class="col-6">I like Python more than Javascript!</div>
-        </div>
-        <div class="row">
-            <div class="col">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque illo at esse mollitia repellendus culpa ducimus asperiores distinctio iste aspernatur ut quia nisi, provident qui cum accusamus labore tempore voluptatem!
+
+        <div class="row justify-content-center">
+
+            <div class = "col-md-6 col-lg-4 col-xl-3">
+
+                <div class="card bg-dark" style="width: 20rem; height: 20rem;">
+                    <img src="java.png" class="card-img-top ">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Team JS</p>
+                        <a href="#" data-value = "JS" class="btn dark-button" onclick="teamup(this)">Click for Javascript</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "col-md-6 col-lg-4 col-xl-3">
+
+                <div class="card bg-dark " style="width: 19rem; height: 20rem">
+                    <img src="Python-logo-notext.svg.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Team Python</p>
+                        <a data-value = "Python" class="btn dark-button" onclick="teamup(this)">Click for Python!</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque illo at esse mollitia repellendus culpa ducimus asperiores distinctio iste aspernatur ut quia nisi, provident qui cum accusamus labore tempore voluptatem!
+
+        <div class="row justify-content-center">
+            <div id="welcome" class="col">
             </div>
+
+
         </div>
     </div>
 
     <div id="footer">
         <p>Copyright 2022 Justin Pansacola</p>
     </div>
+    
 
 
     <!-- <script>
@@ -61,8 +86,18 @@
 
     </script> -->
     <script>
-        function enlarge(obj){
-            obj.width = 100;
+        function teamup(obj){
+            team = obj.dataset.value;
+            add = ""
+            if(team == "JS"){
+                add = "I'm not on your team"
+            }
+            else{
+                add = "We're on the same team!"
+            }
+            document.getElementById("welcome").innerHTML = `Welcome to Team ${team}!\n${add}`;
+        }
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
