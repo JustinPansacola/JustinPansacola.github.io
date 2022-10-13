@@ -1,0 +1,88 @@
+<div id="headersettings">
+    <button class="dark-button" id="dark-button" onclick="darkmode()">Dark Mode</button>
+    <button class="dark-button" id="light-button" onclick="lightmode()">Light Mode</button>
+
+</div>
+<div class="jumbotron-fluid text-center">
+<div id="header">
+    <h1>Hi I'm Justin!</h1>
+
+</div>
+</div>
+
+<div id="links" class="text-center">
+    <ul>
+        <li onmouseover="enlarge(this)"><a href="https://linkedin.com/in/justinpansacola">About Me</a></li>
+        <li>Contact</li>
+    </ul>
+</div>
+
+<div id="midheader">
+    <img src="./1659521988089.jpeg" >
+</div>
+
+<div id="maincontent" class="container mx-auto outline">
+
+    <div class="row outline">
+
+        <div class="col"><h1>Hello! Welcome to my page!</h1></div>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class = "col-md-6 col-lg-4 col-xl-3">
+
+            <div class="card bg-dark" style="width: 20rem; height: 20rem;">
+                <img src="java.png" class="card-img-top ">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Team JS</p>
+                    <a href="#" data-value = "JS" class="btn dark-button" onclick="teamup(this)">Click for Javascript</a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "col-md-6 col-lg-4 col-xl-3">
+
+            <div class="card bg-dark " style="width: 19rem; height: 20rem">
+                <img src="Python-logo-notext.svg.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Team Python</p>
+                    <a data-value = "Python" class="btn dark-button" onclick="teamup(this)">Click for Python!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div id="welcome" class="col">
+        </div>
+
+
+    </div>
+</div>
+
+<div id="footer">
+    <p>Copyright 2022 Justin Pansacola</p>
+</div>
+<!-- <script>
+        function darkmode(){
+            document.getElementsByTagName("div").forEach(function(){
+                div.style.color = white;
+            });
+
+
+    </script> -->
+    <script>
+        function teamup(obj){
+            team = obj.dataset.value;
+            add = ""
+            if(team == "JS"){
+                add = "I'm not on your team"
+            }
+            else{
+                add = "We're on the same team!"
+            }
+            document.getElementById("welcome").innerHTML = `Welcome to Team ${team}!\n${add}`;
+        }
