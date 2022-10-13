@@ -10,13 +10,133 @@
   </head>
 
 <body>
-    <div class="progress">
-        <div class="color"></div>
+    <!-- <div id="preloader">
+      <h1 style="margin: auto; text-align:center; margin-top: 400px;">Click to start!</h1>
+    </div> -->
+    
+    <nav class="navbar nav-color rounded-bottom">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Juicetin</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Justin Pansacola</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Links
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="https://www.linkedin.com/in/justinpansacola/">LinkedIn</a></li>
+                    <hr class="dropdown-divider">
+                    <li><a class="dropdown-item" href="https://github.com/JustinPansacola">Github</a></li>
+                    <li>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <h1 style="text-align: center; color:white; margin-top: 50px;">About Me</h1>
+
+      <div id="carouselExampleSlidesOnly" class="carousel slide m-auto mt-5 mb-5 rounded" data-bs-ride="carousel" style="width:10% ; height: 250px;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/justin2.JPG" class="d-block w-100 " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/justin.jpeg" class="d-block w-100 " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/justin3.jpg" class="d-block w-100 " alt="...">
+          </div>
+        </div>
       </div>
-    
-    
+
+      <div class="container m-auto" style="width: 50%;">
+        <div class="row justify-content-center">
+          <div class="col text-center">
+            <h4>Current Sophomore in Singapore Management University majoring in Information Systems. Skilled and
+              fluent in multiple programming languages such as C, Python, MySQL and JavaScript. Detailed oriented and always seeking to learn.</h4>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="container m-auto mt-5" style="width: 50%;">
+          <div class="row justify-content-center">
+            <div class="col text-center">
+              <h2>My Skills</h2>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col text-center">
+                <img src="./images/Python-logo-notext.svg.png" alt="" width="150px">
+              </div>
+              <div class="col text-center">
+                <img src="./images/java.png" alt="" width="150px">
+              </div>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col text-center">
+                <img src="./images/MySQL-Logo.png" alt="" width="150px">
+              </div>
+              <div class="col text-center">
+                <img src="./images/php.png" alt="" width="150px">
+              </div>
+        </div>
+
+
+        <div class="card mt-5">
+          <div class="card-body" style="background-color: #25274D">
+            <blockquote class="blockquote mb-0">
+              <p id="random-quote-text">A well-known quote, contained in a blockquote element.</p>
+              <footer class="blockquote-footer text-end" id="random-quote-author">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+            </blockquote>
+          </div>
+        </div>
+
+
+      <script>
+        var loader = document.getElementById("preloader")
+        window.addEventListener("click", function(){
+            loader.style.display = "none"
+        })
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+      var api_url = "https://goquotes-api.herokuapp.com/api/v1/random?count=1" 
+ 
+     axios.get(api_url) 
+     .then(function(response){ 
+         let quote = response.data.quotes[0].text; 
+         let author = response.data.quotes[0].author; 
+  
+        text_place = document.getElementById("random-quote-text"); 
+        author_place = document.getElementById("random-quote-author"); 
+  
+        text_place.innerText = quote; 
+        author_place.innerText = author; 
+  
+     });
+    </script>
+
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-   
+
 </body>
 </html>

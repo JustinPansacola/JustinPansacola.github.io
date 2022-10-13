@@ -1,39 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body{
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%,-50%);
-    background-color: #2a9d8f;
+    margin: 0;
+    height: 100vh;
+    background-color: #25274D ;
+    background-size: cover;
 }
-.progress{
-    position: relative;
-    height: 10px;
-    width: 1110%;
-    border: 10px solid #f4a261;
-    border-radius: 15px;
+
+
+#preloader{
+background: #000 url(./images/preloader.gif) no-repeat center center;
+background-size: 20%;
+height: 100vh;
+width: 100%;
+position: fixed;
+z-index: 1000;
 }
-.progress .color{
-    position: absolute;
-    background-color: #ffffff;
-    width: 0px;
-    height: 10px;
-    border-radius: 15px;
-    animation: progres 4s infinite linear;    
+
+.nav-color{
+    background-color: #29648A ;
 }
-@keyframes progres{
-    0%{
-      width: 0%;
-    }
-    25%{
-        width: 50%;
-    }
-    50%{
-        width: 75%;
-    }
-    75%{
-        width: 85%;
-    }
-    100%{
-        width: 100%;
-    }
-};
+
+.outline{
+    outline: 1px black border;
+}
+
+#profilepic{
+    width: 500px;
+}
